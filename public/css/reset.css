@@ -1,0 +1,113 @@
+
+
+/* Aurora Platform */
+
+
+/* Use more intuitive box-sizing on all elements. This prevents padding and border from increasing the final width/height of the element. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Force elements to occupy 100% of the browser screen width */
+
+html, body {
+    width: 100%;
+}
+
+
+/* Remove default margins from many elements. The body is a common candidate, but many others also have margins you may not want. */
+
+html,
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+form,
+figure,
+blockquote,
+dl, dd {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Set a more manageable base line-height on the root element. This helps with readability and vertical spacing of the text. */
+
+html {
+  line-height: 1.5;
+}
+
+
+/* Improve the default behavior of media elements. Makes images and other media elements not exceed the width of their container. */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block; /* Remove extra space below inline images */
+  max-width: 100%;
+}
+
+
+/* Remove default list styles for lists. You can selectively add them back where you need them. */
+
+ul,
+ol {
+  padding: 0; /* Remove o padding-left padrão */
+  list-style: none;
+}
+
+
+/* Inherit fonts for inputs and buttons for consistency. By default, they can use different system fonts than the rest of the page. */
+
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Makes them inherit the font-family, font-size, etc., of the parent element */
+}
+
+
+/* Remove the default appearance of buttons in some browsers (especially iOS). This helps to have more control over the style of the buttons. */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: none; /* Remove iOS styles */
+  appearance: none;
+  background: none; /* Remove default backgrounds */
+  border: none; /* Remove default borders */
+  padding: 0; /* Remove default paddings */
+  cursor: pointer; /* Ensures that the cursor is a pointer cursor */
+}
+
+
+/* Make classless anchor links behave more predictably. By removing the default underline and inheriting the text color. */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Recommended for Accessibility: Ensure that interactive elements have visible focus.
+This is important for keyboard navigation. */
+
+:focus-visible {
+  outline: 2px solid highlight; /* 'highlight' is a system color. You can and should use a color that matches your design */
+  outline-offset: 2px;
+}
+
+
+/* Scroll the page smoothly when internal links are clicked. */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
