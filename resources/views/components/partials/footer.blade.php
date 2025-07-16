@@ -13,7 +13,7 @@
                         <ul class="footer-menu">
 
                             <li class="footer-item">
-                                <a href="#"> About </a>
+                                <a href="{{ route('about') }}"> About </a>
                             </li>
 
                             <li class="footer-item">
@@ -21,15 +21,15 @@
                             </li>
 
                             <li class="footer-item">
-                                <a href="#"> Courses </a>
+                                <a href="{{ route('courses') }}"> Courses </a>
                             </li>
 
                             <li class="footer-item">
-                                <a href="#"> Login </a>
+                                <a href="{{ route('login') }}"> Login </a>
                             </li>
 
                             <li class="footer-item">
-                                <a href="#"> Register </a>
+                                <a href="{{ route('register') }}"> Register </a>
                             </li>
 
                         </ul>

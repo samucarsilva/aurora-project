@@ -35,7 +35,7 @@
                         <ul class="navbar-menu" id="navbar-menu">
 
                             <li class="navbar-item">
-                                <a href="#"> About </a>
+                                <a href="{{ route('about') }}"> About </a>
                             </li>
 
                             <li class="navbar-item">
@@ -43,15 +43,15 @@
                             </li>
 
                             <li class="navbar-item">
-                                <a href="#"> Courses </a>
+                                <a href="{{ route('courses') }}"> Courses </a>
                             </li>
 
                             <li class="navbar-item">
-                                <a href="#"> Login </a>
+                                <a href="{{ route('login') }}"> Login </a>
                             </li>
 
                             <li class="navbar-item">
-                                <a href="#"> Register </a>
+                                <a href="{{ route('register') }}"> Register </a>
                             </li>
 
                         </ul>
