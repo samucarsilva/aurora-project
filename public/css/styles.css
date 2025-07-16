@@ -56,6 +56,250 @@
 }
 
 
+    /* Display Properties */
+
+.display-flex {
+    display: flex;
+}
+
+
+.flex-column {
+    flex-direction: column;
+}
+
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+
+.justify-center {
+    justify-content: center;
+}
+
+
+.justify-between {
+    justify-content: space-between;
+}
+
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+
+.align-start {
+    align-items: flex-start;
+}
+
+
+.align-center {
+    align-items: center;
+}
+
+
+.align-end {
+    align-items: flex-end;
+}
+
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+
+    /* Spacing Properties */
+
+.margin-auto {
+    margin: auto;
+}
+
+
+.margin-none {
+    margin: 0;
+}
+
+
+.padding-none {
+    padding: 0;
+}
+
+
+    /* Background Properties */
+
+.background-light {
+    background-color: var(--aurora-background-light);
+}
+
+
+.background-dark {
+    background-color: var(--aurora-background-dark);
+}
+
+
+.background-page {
+    background-color: var(--aurora-surface-color-1);
+}
+
+
+.background-card {
+    background-color: var(--aurora-surface-color-2);
+}
+
+
+    /* Font Properties */
+
+.font-size-1 {
+    font-size: var(--aurora-font-size-1);
+}
+
+
+.font-size-2 {
+    font-size: var(--aurora-font-size-2);
+}
+
+
+.font-size-3 {
+    font-size: var(--aurora-font-size-3);
+}
+
+
+.font-size-4 {
+    font-size: var(--aurora-font-size-4);
+}
+
+
+.font-size-5 {
+    font-size: var(--aurora-font-size-5);
+}
+
+
+.font-italic {
+    font-style: italic;
+}
+
+
+.font-medium {
+    font-weight: 500;
+}
+
+
+.font-semibold {
+    font-weight: 600;
+}
+
+
+.font-bold {
+    font-weight: 700;
+}
+
+
+    /* Text Properties */
+
+.text-light {
+    color: var(--aurora-text-light);
+}
+
+
+.text-dark {
+    color: var(--aurora-text-dark);
+}
+
+
+.text-muted {
+    color: var(--aurora-text-color-muted);
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+
+    /* Dimension Properties */
+
+.width-full {
+    width: 100%;
+}
+
+
+.width-75 {
+    width: 75%;
+}
+
+
+.width-50 {
+    width: 50%;
+}
+
+
+.width-25 {
+    width: 25%;
+}
+
+
+.width-fit {
+    width: fit-content;
+}
+
+
+.height-full {
+    height: 100vh;
+}
+
+
+.height-80 {
+    height: 80px;
+}
+
+
+.height-64 {
+    height: 64px;
+}
+
+
+.height-32 {
+    height: 32px;
+}
+
+
+.height-fit {
+    height: fit-content;
+}
+
+
+    /* Position Properties */
+
+.position-absolute {
+    position: absolute;
+}
+
+
+.position-fixed {
+    position: fixed;
+}
+
+
+.position-sticky {
+    position: static;
+}
+
+
+.position-sticky {
+    position: sticky;
+}
+
+
+.position-relative {
+    position: relative;
+}
+
+
 
 /* Website Styles */
 
