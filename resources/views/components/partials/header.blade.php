@@ -26,6 +26,9 @@
                     </div>
 
 
+                @if ($page != 'register' && 
+                        $page != 'login')
+
                     <div class="aurora-menu">
 
                         <div class="menu-icon" id="menu-icon">
@@ -57,6 +60,8 @@
                         </ul>
 
                     </div>
+                
+                @endif
 
             </nav>
 
