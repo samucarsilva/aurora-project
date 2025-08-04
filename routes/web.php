@@ -10,7 +10,7 @@ Route::get('/about', function () {
 
 
 Route::get('/courses', function () {
-    return view('courses', ['page' => 'courses']);
+    return view('courses.index', ['page' => 'courses']);
 })->name('courses');
 
 
@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('/login', function () {
-    return view('login', ['page' => 'login']);
+    return view('auth.login', ['page' => 'login']);
 })->name('login');
 
 
