@@ -1,4 +1,4 @@
-@include("components/partials.header")
+@include('components.partials.header')
 
 
     <main class="aurora-main">
@@ -6,4 +6,4 @@
     </main>
 
 
-@include("components/partials.footer")
+@include('components.partials.footer')

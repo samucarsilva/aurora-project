@@ -1,4 +1,4 @@
-@include('components/partials.header')
+@include('components.partials.header')
 
 
     <main class="aurora-main justify-center">
@@ -106,4 +106,4 @@
     </main>
 
 
-@include('components/partials.footer')
+@include('components.partials.footer')
