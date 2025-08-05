@@ -26,8 +26,8 @@
                     </div>
 
 
-                @if ($page != 'register' && 
-                        $page != 'login')
+                @if (!in_array($page ?? null, 
+                        ['register', 'login']))
 
                     <div class="aurora-menu">
 
