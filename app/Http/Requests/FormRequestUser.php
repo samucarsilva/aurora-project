@@ -2,10 +2,14 @@
 
 namespace App\Http\Requests;
 
+
 use Illuminate\Foundation\Http\FormRequest;
+
 
 class FormRequestUser extends FormRequest
 {
+
+
     /**
      * Determine if the user is authorized to make this request.
      */
@@ -15,23 +19,23 @@ class FormRequestUser extends FormRequest
         return true; // If this form is for anyone to register.
     }
 
+
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array<string
      */
 
     public function rules(): array
     {
-
         return [
             'name' => ['required', 'string', 'max:255', 'regex:/^[\p{L}\s\'-]+$/u'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
             'terms' => ['required', 'accepted']
         ];
-
     }
+
 
     /**
      * Get custom messages for validation errors.
@@ -41,7 +45,6 @@ class FormRequestUser extends FormRequest
 
     public function messages(): array
     {
-
         return [
             'name.required' => 'The username is required.',
             'email.required' => 'The e-mail is required.',
@@ -52,7 +55,7 @@ class FormRequestUser extends FormRequest
             'terms.required' => 'You must accept the terms of use.',
             'terms.accepted' => 'Terms of use must be accepted',
         ];
-
     }
+
 
 }

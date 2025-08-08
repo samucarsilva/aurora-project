@@ -1,5 +1,4 @@
 
-
     <footer class="aurora-footer">
 
         <div class="footer-container">
@@ -42,7 +41,7 @@
 
                     <div class="footer-icons">
                         <a href="https://github.com/ApenasAlguem007/aurora-platform" target="_blank">
-                            <span class="bi bi-github">  </span>
+                            <span class="bi bi-github"> </span>
                         </a>
                     </div>
 
@@ -54,7 +53,7 @@
             <div class="footer-bottom">
 
                 <div class="copyright-section">
-                    <p> Copyright &copy; <?php echo date('Y'); ?> Aurora Platform. All Rights Reserved. </p>
+                    <p> Copyright &copy; {{ date('Y') }} Aurora Platform. All Rights Reserved. </p>
                 </div>
 
                 <div class="verify-certificate">
@@ -66,11 +65,3 @@
         </div>
 
     </footer>
-
-
-    <script src="{{ asset('js/bootstrap.js') }}"> </script>
-    <script src="{{ asset('js/script.js') }}"> </script>
-
-
-</body>
-</html>

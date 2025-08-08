@@ -3,19 +3,11 @@
 /* Aurora Platform */
 
 
-/* Use more intuitive box-sizing on all elements. This prevents padding and border from increasing the final width/height of the element. */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-
-/* Force elements to occupy 100% of the browser screen width */
+/* Force elements to occupy 100% of the browser screen width and height */
 
 html, body {
-    width: 100%;
+  width: 100%;
+  min-height: 100vh;
 }
 
 
@@ -55,6 +47,14 @@ svg {
 }
 
 
+/* Make classless anchor links behave more predictably. By removing the default underline and inheriting the text color. */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 /* Remove default list styles for lists. You can selectively add them back where you need them. */
 
 ul,
@@ -71,29 +71,6 @@ button,
 textarea,
 select {
   font: inherit; /* Makes them inherit the font-family, font-size, etc., of the parent element */
-}
-
-
-/* Remove the default appearance of buttons in some browsers (especially iOS). This helps to have more control over the style of the buttons. */
-
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: none; /* Remove iOS styles */
-  appearance: none;
-  background: none; /* Remove default backgrounds */
-  border: none; /* Remove default borders */
-  padding: 0; /* Remove default paddings */
-  cursor: pointer; /* Ensures that the cursor is a pointer cursor */
-}
-
-
-/* Make classless anchor links behave more predictably. By removing the default underline and inheriting the text color. */
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 

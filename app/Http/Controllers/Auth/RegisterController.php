@@ -3,16 +3,22 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\FormRequestUser;
-use App\Models\User;
 
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\FormRequestUser;
+use App\Models\User;
+
 
 class RegisterController extends Controller
 {
+
+
+    /**
+     * Show the form for creating a new resource.
+     */
 
     public function create() 
     {
@@ -23,9 +29,8 @@ class RegisterController extends Controller
     /**
      * Processes the submission of the registration form.
      * 
-     * @param FormRequestUser $request
+     * @param RegisterRequest $request
      */
-
 
     public function store(FormRequestUser $request) 
     {
@@ -50,5 +55,6 @@ class RegisterController extends Controller
             return redirect('/')->with('success', 'Your account has been successfully created!');
 
     }
+
 
 }
