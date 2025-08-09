@@ -29,3 +29,13 @@ Route::get('login', function () {
 Route::get('register', [RegisterController::class, 'create'])->name('register');
 
 Route::post('register', [RegisterController::class, 'store'])->name('register.store');
+
+
+Route::get('forgot-password', function () {
+    return view('auth.forgot-password', ['page' => 'forgot-password']);
+})->name('forgot');
+
+
+Route::get('reset-password', function () {
+    return view('auth.reset-password', ['page' => 'reset-password']);
+})->name('reset');
