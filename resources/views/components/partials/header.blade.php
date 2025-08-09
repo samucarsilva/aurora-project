@@ -12,7 +12,7 @@
             </div>
 
             @if(!in_array($page ?? null,
-                    ['register', 'login']))
+                    ['register', 'login', 'forgot-password', 'reset-password']))
 
                 <div class="aurora-menu">
 
