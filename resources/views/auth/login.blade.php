@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="form-group">
-                    <a class="button-link" href="#"> Sign Up </a>
+                    <a class="button-link" href="{{ route('register') }}"> Sign Up </a>
                 </div>
 
             </div>
