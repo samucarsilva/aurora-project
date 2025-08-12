@@ -31,7 +31,7 @@
                     <label class="form-label" for="password"> Password </label>
 
                     <div class="display-flex justify-end pt-3">
-                        <a class="button-link" href="#"> Forgot Password </a>
+                        <a class="button-link" href="{{ route('forgot') }}"> Forgot Password </a>
                     </div>
 
                 </div>
