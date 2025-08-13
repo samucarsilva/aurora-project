@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="form-group">
-                    <a class="button-link" href="{{ route('login') }}" role="button"> Sign In </a>
+                    <a class="button-link" href="{{ route('login.create') }}" role="button"> Sign In </a>
                 </div>
 
             </div>

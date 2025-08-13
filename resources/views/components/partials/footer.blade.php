@@ -24,11 +24,11 @@
                             </li>
 
                             <li class="footer-item">
-                                <a href="{{ route('login') }}"> Login </a>
+                                <a href="{{ route('login.create') }}"> Login </a>
                             </li>
 
                             <li class="footer-item">
-                                <a href="{{ route('register') }}"> Register </a>
+                                <a href="{{ route('register.create') }}"> Register </a>
                             </li>
 
                         </ul>

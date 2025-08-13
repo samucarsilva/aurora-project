@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="form-group">
-                    <a class="button-link" href="{{ route('login') }}"> Sign In </a>
+                    <a class="button-link" href="{{ route('login.create') }}"> Sign In </a>
                 </div>
 
             </div>

@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="form-group">
-                    <a class="button-link" href="{{ route('login') }}" role="button"> Cancel </a>
+                    <a class="button-link" href="{{ route('login.create') }}" role="button"> Cancel </a>
                 </div>
 
             </div>

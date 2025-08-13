@@ -1,41 +1,64 @@
 <?php
 
 
-use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\Auth\RegisterController;
 
-
-Route::get('about', function () {
-    return view('about', ['page' => 'about']);
-})->name('about');
+use Illuminate\Support\Facades\Route;
 
 
-Route::get('courses', function () {
-    return view('courses.index', ['page' => 'courses']);
-})->name('courses');
+// Aurora Routes
 
 
-Route::get('/', function () {
-    return view('home', ['page' => 'home']);
-})->name('home');
+    // About Us
+
+        Route::get('about', function () {
+            return view('about', ['page' => 'about']);
+        })->name('about');
 
 
-Route::get('login', function () {
-    return view('auth.login', ['page' => 'login']);
-})->name('login');
+    // Home Page
+
+        Route::get('/', function () {
+            return view('home', ['page' => 'home']);
+        })->name('home');
 
 
-Route::get('register', [RegisterController::class, 'create'])->name('register');
 
-Route::post('register', [RegisterController::class, 'store'])->name('register.store');
-
-
-Route::get('forgot-password', function () {
-    return view('auth.forgot-password', ['page' => 'forgot-password']);
-})->name('forgot');
+// Auth Routes
 
 
-Route::get('reset-password', function () {
-    return view('auth.reset-password', ['page' => 'reset-password']);
-})->name('reset');
+    // Register
+
+        Route::get('register', [RegisterController::class, 'create'])->name('register.create');
+
+        Route::post('register', [RegisterController::class, 'store'])->name('register.store');
+
+
+    // Login
+
+        Route::get('login', function () {
+            return view('auth.login', ['page' => 'login']);
+        })->name('login.create');
+
+
+    // Forgot
+
+        Route::get('forgot-password', function () {
+            return view('auth.forgot-password', ['page' => 'forgot-password']);
+        })->name('forgot');
+
+
+    // Forgot
+
+        Route::get('reset-password', function () {
+            return view('auth.reset-password', ['page' => 'reset-password']);
+        })->name('reset');
+
+
+
+// Courses Routes
+
+    Route::get('courses', function () {
+        return view('courses.index', ['page' => 'courses']);
+    })->name('courses');
+
