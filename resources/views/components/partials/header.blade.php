@@ -34,13 +34,46 @@
                             <a href="{{ route('courses') }}"> Courses </a>
                         </li>
 
-                        <li class="navbar-item">
-                            <a href="{{ route('login.create') }}"> Login </a>
-                        </li>
+                            @guest
 
-                        <li class="navbar-item">
-                            <a href="{{ route('register.create') }}"> Register </a>
-                        </li>
+                                <li class="navbar-item">
+                                    <a href="{{ route('login.create') }}"> Login </a>
+                                </li>
+
+                                <li class="navbar-item">
+                                    <a href="{{ route('register.create') }}"> Register </a>
+                                </li>
+                            
+                            @endguest
+
+                        @auth
+
+                            <li class="navbar-item dropdown-container">
+                    
+                                <button class="button-style none" id="user-menu-toggle" aria-label="Open User Menu">
+                                    <img class="profile-picture" src="{{ asset('images/aurora/default-profile.png') }}" alt="User Profile Picture.">
+                                </button>
+                                
+                                <ul class="dropdown-menu" id="user-menu">
+
+                                    <li>
+
+                                        <form method="POST" action="{{ route('logout') }}" class="d-block">
+                                            @csrf
+
+                                            <button type="submit" class="dropdown-item w-100 text-start">
+                                                Logout
+                                            </button>
+
+                                        </form>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                        @endauth
 
                     </ul>
 

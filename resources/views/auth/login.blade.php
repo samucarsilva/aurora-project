@@ -8,7 +8,7 @@
 
     <div class="form-container">
 
-        <form class="form-card" action="" method="POST">
+        <form class="form-card" action="{{ route('login.store') }}" method="POST">
             @csrf
 
 
