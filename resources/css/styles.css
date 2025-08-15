@@ -112,6 +112,23 @@ body {
 }
 
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  box-shadow: 0 0 0px 1000px transparent inset !important; /* Input Background Color */
+  -webkit-text-fill-color: var(--aurora-text-light) !important; /* Input Text Color */
+  color: var(--aurora-text-light) !important;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+}
+
+
 
 /* Header Section */
 

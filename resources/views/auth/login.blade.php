@@ -20,14 +20,14 @@
             <div class="form-main gap-5">
 
                 <div class="form-group">
-                    <input class="form-input" type="email" name="email" id="email" value="{{ old('email') }}" autocomplete="off" placeholder=" ">
+                    <input class="form-input" type="email" name="email" id="email" value="{{ old('email') }}" autocomplete="email" placeholder=" ">
                     <label class="form-label" for="email"> E-Mail </label>
                 </div>
 
 
                 <div class="form-group">
 
-                    <input class="form-input" type="password" name="password" id="password" autocomplete="off" placeholder=" ">
+                    <input class="form-input" type="password" name="password" id="password" autocomplete="current-password" placeholder=" ">
                     <label class="form-label" for="password"> Password </label>
 
                     <div class="display-flex justify-end pt-3">

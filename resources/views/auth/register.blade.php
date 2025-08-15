@@ -21,7 +21,7 @@
 
                 <div class="form-group">
 
-                    <input class="form-input @error('name') border-danger @enderror" type="text" name="name" id="name" value="{{ old('name') }}" autocomplete="off" placeholder=" ">
+                    <input class="form-input @error('name') border-danger @enderror" type="text" name="name" id="name" value="{{ old('name') }}" autocomplete="username" placeholder=" ">
                     <label class="form-label @error('name') text-danger @enderror" for="name"> Name </label>
 
                     @error('name')
@@ -37,7 +37,7 @@
 
                 <div class="form-group">
 
-                    <input class="form-input @error('email') border-danger @enderror" type="email" name="email" id="email" value="{{ old('email') }}" autocomplete="off" placeholder=" ">
+                    <input class="form-input @error('email') border-danger @enderror" type="email" name="email" id="email" value="{{ old('email') }}" autocomplete="email" placeholder=" ">
                     <label class="form-label @error('email') text-danger @enderror" for="email"> E-Mail </label>
 
                     @error('email')
@@ -53,7 +53,7 @@
 
                 <div class="form-group">
 
-                    <input class="form-input @error('password') border-danger @enderror" type="password" name="password" id="password" placeholder=" ">
+                    <input class="form-input @error('password') border-danger @enderror" type="password" name="password" id="password" autocomplete="new-password" placeholder=" ">
                     <label class="form-label @error('password') text-danger @enderror" for="password"> Password </label>
 
                     @error('password')
