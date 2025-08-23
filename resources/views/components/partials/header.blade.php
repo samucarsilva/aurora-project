@@ -48,13 +48,21 @@
 
                         @auth
 
-                            <li class="navbar-item dropdown-container">
+                            <li class="dropdown-container">
                     
-                                <button class="button-style none" id="user-menu-toggle" aria-label="Open User Menu">
-                                    <img class="profile-picture" src="{{ asset('images/aurora/default-profile.png') }}" alt="User Profile Picture.">
-                                </button>
+                                <a id="user-menu-toggle" role="button" aria-label="Open User Menu">
+                                    <img class="profile-thumbnail" src="{{ Auth::user()->profile_picture_url }}" alt="User Profile Picture.">
+                                </a>
                                 
                                 <ul class="dropdown-menu" id="user-menu">
+
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('dashboard', ['user' => Auth::user()->username]) }}">
+                                            <span class="bi bi-layout-wtf">  </span> Dashboard
+                                        </a>
+                                    </li>
+
+                                        <hr class="dropdown-divider">
 
                                     <li>
 

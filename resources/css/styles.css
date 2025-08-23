@@ -230,17 +230,17 @@ select:-webkit-autofill:focus {
 }
 
 
-.profile-picture {
+.profile-thumbnail {
     width: 32px;
     height: 32px;
-    object-fit: cover;
-    border-radius: 50%;
     border: 2px solid var(--aurora-brand-color-primary);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: var(--aurora-transition-default);
 }
 
 
-.profile-picture:hover {
+.profile-thumbnail:hover {
     transform: scale(1.075);
 }
 
