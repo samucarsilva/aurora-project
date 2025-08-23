@@ -23,9 +23,11 @@ class User extends Authenticatable
 
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
         'role',
+        'profile_picture_path',
         'terms_accepted_at'
     ];
 
@@ -54,6 +56,32 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed', // Encrypt The Password
         ];
+    }
+
+
+    /**
+     * Get the route key for the model.
+     */
+
+    public function getRouteKeyName(): string
+    {
+        return 'username';
+    }
+
+
+    /**
+     * Get the URL for the user's profile image.
+     *
+     * @return string
+     */
+
+    public function getProfilePictureUrlAttribute(): string
+    {
+        if ($this->profile_picture_path) {
+            return asset('storage/' . $this->profile_picture_path); // Returns The Path of The Stored Image.
+        }
+
+        return asset('images/aurora/default-profile.png'); // Returns The Default Image Path.
     }
 
 

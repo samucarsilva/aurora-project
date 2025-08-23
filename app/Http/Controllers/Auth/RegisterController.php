@@ -4,12 +4,14 @@
 namespace App\Http\Controllers\Auth;
 
 
-use Illuminate\Support\Facades\Hash;
-use Carbon\Carbon;
-
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\Auth\RegisterRequest; // Importing the Form Request
 use App\Models\User;
+
+use Carbon\Carbon;
+use Illuminate\Support\Str; // Import Str Facade
+use Illuminate\Support\Facades\Auth; // Facade For Authentication
+use Illuminate\Support\Facades\Hash; // Facade For Encryption
 
 
 class RegisterController extends Controller
@@ -35,22 +37,49 @@ class RegisterController extends Controller
     public function store(RegisterRequest $request) 
     {
 
-        // Collect only validated data.
+        // Take the part of the email before the symbol and sanitize it.
 
-            $data = $request->validated();
+            $emailPrefix = Str::before($request->email, '@');
+            $baseUsername = Str::slug($emailPrefix, '');
 
-
-            $data['password'] = Hash::make($data['password']);
-            $data['role'] = 'student';
-            $data['terms_accepted_at'] = Carbon::now();
-
-
-        // Creates the user in the database.
-
-            User::create($data);
+            $username = $baseUsername;
+            $counter = 1;
 
 
-        // Redirects user to home page with success.
+        // Loop to Ensure Uniqueness.
+
+            while (User::where('username', $username)->exists()) {
+                $username = $baseUsername . $counter;
+                $counter++;
+            }
+
+
+        // Creates a New User Instance.
+
+            $user = new User();
+
+
+        // Filling the Table Attributes.
+
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = Hash::make($request->password);
+            $user->role = 'student';
+            $user->username = $username; // Assign The Generated Username
+            $user->terms_accepted_at = Carbon::now();
+
+
+        // Saving the user in the database.
+
+            $user->save();
+
+
+        // Logs in the newly created user.
+
+            Auth::login($user);
+
+
+        // Successfully redirect the user to home page.
 
             return redirect('/')->with('success', 'Your account has been successfully created!');
 
