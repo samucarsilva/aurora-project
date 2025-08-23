@@ -435,6 +435,36 @@ select:-webkit-autofill:focus {
 
 
 
+    /* User Dashboard */
+
+
+.card-rounded {
+    border-radius: 15px;
+}
+
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid var(--aurora-brand-color-primary);
+    transition: transform var(--aurora-transition-default);
+}
+
+
+.profile-picture:hover {
+    transform: scale(1.05);
+}
+
+
+.pencil-icon {
+    font-size: 0.8em;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+
+
 /* Footer Section */
 
 

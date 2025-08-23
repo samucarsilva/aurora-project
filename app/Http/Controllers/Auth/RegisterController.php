@@ -79,9 +79,9 @@ class RegisterController extends Controller
             Auth::login($user);
 
 
-        // Successfully redirect the user to home page.
+        // Successfully redirect the user to the dashboard.
 
-            return redirect('/')->with('success', 'Your account has been successfully created!');
+            return redirect()->route('dashboard', ['user' => $user->username])->with('success', 'Your account has been successfully created!');
 
     }
 
