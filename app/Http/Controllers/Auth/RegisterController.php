@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\FormRequestUser;
+use App\Http\Requests\Auth\RegisterRequest;
 use App\Models\User;
 
 
@@ -32,7 +32,7 @@ class RegisterController extends Controller
      * @param RegisterRequest $request
      */
 
-    public function store(FormRequestUser $request) 
+    public function store(RegisterRequest $request) 
     {
 
         // Collect only validated data.

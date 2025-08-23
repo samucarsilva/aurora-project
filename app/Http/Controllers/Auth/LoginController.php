@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\FormRequestLogin; // Importing The Form Request
+use App\Http\Requests\Auth\LoginRequest; // Importing The Form Request
 use App\Models\User;
 
 use Illuminate\Http\Request;
@@ -31,10 +31,10 @@ class LoginController extends Controller
     /**
      * Processes the login attempt.
      *
-     * @param FormRequestLogin $request
+     * @param LoginRequest $request
      */
 
-    public function store(FormRequestLogin $request): RedirectResponse
+    public function store(LoginRequest $request): RedirectResponse
     {
 
         // The authenticate() method already attempts to log in the user

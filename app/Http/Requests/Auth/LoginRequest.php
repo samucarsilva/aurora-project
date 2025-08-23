@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Auth;
 
 
 use Illuminate\Auth\Events\Lockout;
@@ -11,7 +11,7 @@ use Illuminate\Support\Str; // For String Methods
 use Illuminate\Validation\ValidationException; // For The Validation Exception
 
 
-class FormRequestLogin extends FormRequest
+class LoginRequest extends FormRequest
 {
 
 
