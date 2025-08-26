@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\RegisterController;
 
 
 use App\Http\Controllers\User\DashboardController;
+use App\Http\Controllers\User\UserController;
 
 
 // Aurora Routes
@@ -74,6 +75,13 @@ Route::middleware('auth')->group(function () {
 
                 Route::get('{user}/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+
+            // Edit Profile
+
+            
+                Route::get('profile', [UserController::class, 'edit'])->name('user.edit');
+
+                Route::put('profile', [UserController::class, 'update'])->name('user.update');
 
 });
 

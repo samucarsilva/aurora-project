@@ -62,6 +62,12 @@
                                         </a>
                                     </li>
 
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('user.edit') }}">
+                                            <span class="bi bi-person-circle">  </span> Edit Profile
+                                        </a>
+                                    </li>
+
                                         <hr class="dropdown-divider">
 
                                     <li>

@@ -16,7 +16,7 @@
 
                     <h2 class="mb-0">
                         {{ Auth::user()->name }}
-                        <a href="#" class="text-white" title="Edit Profile">
+                        <a href="{{ route('user.edit') }}" class="text-white" title="Edit Profile">
                             <span class="bi bi-pencil-square pencil-icon">  </span>
                         </a>
                     </h2>
