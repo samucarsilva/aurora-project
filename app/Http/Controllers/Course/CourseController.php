@@ -25,4 +25,14 @@ class CourseController extends Controller
     }
 
 
+    /**
+     * Display the specified resource.
+     */
+
+    public function show(Course $course) 
+    {
+        return view('courses.show', compact('course'));
+    }
+
+
 }

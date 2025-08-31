@@ -51,6 +51,8 @@ use App\Http\Controllers\User\UserController;
 
     Route::get('courses', [CourseController::class, 'index'])->name('courses.index');
 
+    Route::get('courses/{course}', [CourseController::class, 'show'])->name('course.show');
+
 
 
     // Routes For Authenticated Users

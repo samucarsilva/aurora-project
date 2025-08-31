@@ -15,7 +15,7 @@
                     </div>
 
                     <div class="card-footer display-flex justify-center text-center p-1">
-                        <a href="#" class="aurora-button rounded-2 w-50 btn btn-sm"> Details </a>
+                        <a href="{{ route('course.show', $course) }}" class="aurora-button rounded-2 w-50 btn btn-sm"> Details </a>
                     </div>
 
                 </div>
