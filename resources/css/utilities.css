@@ -89,13 +89,70 @@
 }
 
 
-.background-page {
+.surface-color-1 {
     background-color: var(--aurora-surface-color-1);
 }
 
 
-.background-card {
+.surface-color-2 {
     background-color: var(--aurora-surface-color-2);
+}
+
+
+.surface-color-3 {
+    background-color: var(--aurora-surface-color-3);
+}
+
+
+.surface-color-4 {
+    background-color: var(--aurora-surface-color-4);
+}
+
+
+.surface-color-5 {
+    background-color: var(--aurora-surface-color-5);
+}
+
+
+.surface-color-6 {
+    background-color: var(--aurora-surface-color-6);
+}
+
+
+.surface-color-7 {
+    background-color: var(--aurora-surface-color-7);
+}
+
+
+.aurora-color-1 {
+    background-color: var(--aurora-brand-color-primary);
+}
+
+
+.aurora-color-2 {
+    background-color: var(--aurora-brand-color-secondary);
+}
+
+
+.background-transparent {
+    background-color: transparent;
+}
+
+
+    /* Border Properties */
+
+.aurora-border {
+    border: 1px solid var(--aurora-brand-color-primary);
+}
+
+
+.border-high {
+    border-top: 1px solid var(--aurora-border-color-default);
+}
+
+
+.border-low {
+    border-bottom: 1px solid var(--aurora-border-color-default);
 }
 
 
