@@ -20,7 +20,7 @@
                             </li>
 
                             <li class="footer-item">
-                                <a href="{{ route('courses') }}"> Courses </a>
+                                <a href="{{ route('courses.index') }}"> Courses </a>
                             </li>
 
                             <li class="footer-item">

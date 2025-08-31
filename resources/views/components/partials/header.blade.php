@@ -31,7 +31,7 @@
                         </li>
 
                         <li class="navbar-item">
-                            <a href="{{ route('courses') }}"> Courses </a>
+                            <a href="{{ route('courses.index') }}"> Courses </a>
                         </li>
 
                             @guest

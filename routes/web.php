@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 
+use App\Http\Controllers\Course\CourseController;
 
 use App\Http\Controllers\User\DashboardController;
 use App\Http\Controllers\User\UserController;
@@ -48,9 +49,7 @@ use App\Http\Controllers\User\UserController;
 
 // Courses Routes
 
-    Route::get('courses', function () {
-        return view('courses.index', ['page' => 'courses']);
-    })->name('courses');
+    Route::get('courses', [CourseController::class, 'index'])->name('courses.index');
 
 
 
