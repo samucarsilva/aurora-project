@@ -4,6 +4,7 @@ namespace App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder; // Importing the Builder
 
 
 class Course extends Model
@@ -35,6 +36,44 @@ class Course extends Model
     protected $casts = [
         'is_published' => 'boolean'
     ];
+
+
+    /**
+     * A course belongs to one instructor.
+     */
+
+    public function instructor()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+
+    public function lessons()
+    {
+        return $this->hasMany(Lesson::class);
+    }
+
+
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class);
+    }
+
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'enrollments');  // Enrollment is The Base Table.
+    }
+
+
+    /**
+     * Checks if a specific user is enrolled in this course.
+     */
+
+    public function isEnrolled(User $user)
+    {
+        return $this->users->contains($user->id);
+    }
 
 
     /**

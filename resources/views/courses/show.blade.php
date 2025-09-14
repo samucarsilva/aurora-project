@@ -39,9 +39,15 @@
 
                 <section>
 
-                    <div class="display-flex flex-column align-center m-5">
-                        <button class="aurora-button rounded-2 width-50 height-32 btn btn-sm" type="submit"> Enroll </button>
-                    </div>
+                    <form action="{{ route('course.enroll', ['course' => $course]) }}" method="POST">
+                        @csrf
+
+                        <div class="display-flex flex-column align-center m-5">
+                            <input type="hidden" name="course_id" value="{{ $course->id }}">
+                            <button class="aurora-button rounded-2 width-50 height-32 btn btn-sm" type="submit"> Enroll </button>
+                        </div>
+
+                    </form>
 
                 </section>
 

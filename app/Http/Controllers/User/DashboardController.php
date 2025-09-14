@@ -27,7 +27,11 @@ class DashboardController extends Controller
                 abort(403, 'Unauthorized Access.');
             }
 
-            return view('user.dashboard', compact('user'));
+        // Loads the user's registrations with courses and classes.
+
+            $enrollments = $user->enrollments()->with('course.lessons')->get();
+
+            return view('user.dashboard', compact('user', 'enrollments'));
 
     }
 

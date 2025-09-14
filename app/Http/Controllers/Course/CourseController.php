@@ -6,6 +6,8 @@ namespace App\Http\Controllers\Course;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 
+use Illuminate\Http\Request;
+
 
 class CourseController extends Controller
 {
@@ -32,6 +34,47 @@ class CourseController extends Controller
     public function show(Course $course) 
     {
         return view('courses.show', compact('course'));
+    }
+
+
+    /**
+     * Enroll in a specific course.
+     */
+
+    public function enroll(Request $request, Course $course) 
+    {
+
+            $user = $request->user();
+
+        // Checks if the user is already enrolled in the selected course.
+
+            if ($user->isEnrolledIn($course)) {
+                return back()->with('info', 'You are already enrolled in this course.');
+            }
+
+
+        // Enrolling the user.
+
+            $user->enrollments()->create([
+                'course_id' => $course->id,
+            ]);
+
+
+        // Redirecting the user to the lessons.
+
+            $firstLesson = $course->lessons()->orderBy('order')->first();
+
+            if ($firstLesson) {
+                return redirect()->route('course.lessons', ['course' => $course, 'lesson' => $firstLesson])
+                                ->with('success', 'Enrollment completed successfully!');
+            }
+
+
+        // Fallback if the course has no classes.
+
+            return redirect()->route('dashboard', ['user' => $user])
+                            ->with('success', 'Enrollment completed successfully!');
+
     }
 
 

@@ -59,6 +59,34 @@ class User extends Authenticatable
     }
 
 
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class);
+    }
+
+
+    public function courses()
+    {
+        return $this->belongsToMany(Course::class, 'enrollments')->withTimestamps();;
+    }
+
+
+    public function lessonProgress()
+    {
+        return $this->hasMany(UserLessonProgress::class);
+    }
+
+
+    /**
+     * Check if the user is enrolled in a specific course.
+     */
+
+    public function isEnrolledIn(Course $course): bool
+    {
+        return $this->enrollments()->where('course_id', $course->id)->exists();
+    }
+
+
     /**
      * Get the route key for the model.
      */

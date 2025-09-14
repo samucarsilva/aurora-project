@@ -68,6 +68,13 @@ Route::middleware('auth')->group(function () {
             Route::post('logout', [LoginController::class, 'destroy'])->name('logout');
 
 
+    // Courses Routes
+
+
+        // Enrollment
+
+            Route::post('courses/{course}/enroll', [CourseController::class, 'enroll'])->name('course.enroll');
+
 
     // User Routes
 
