@@ -34,17 +34,9 @@ class Enrollment extends Pivot
     ];
 
 
-    // If you don't use automatic ID and have a composite primary key.
-
-    protected $primaryKey = [
-        'user_id',
-        'course_id'
-    ];
-
-    public $incrementing = false;
-
-    protected $keyType = 'integer'; // Can be string or integer depending on the types of the keys.
-
+    /**
+     * Laravel Eloquent Relationships.
+     */
 
     public function user()
     {
