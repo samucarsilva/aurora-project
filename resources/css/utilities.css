@@ -30,8 +30,18 @@
 }
 
 
+.justify-around {
+    justify-content: space-around;
+}
+
+
 .justify-between {
     justify-content: space-between;
+}
+
+
+.justify-evenly {
+    justify-content: space-evenly;
 }
 
 
@@ -204,6 +214,16 @@
 
 
     /* Text Properties */
+
+.aurora-text-color-1 {
+    color: var(--aurora-brand-color-primary);
+}
+
+
+.aurora-text-color-2 {
+    color: var(--aurora-brand-color-secondary);
+}
+
 
 .text-light {
     color: var(--aurora-text-light);
