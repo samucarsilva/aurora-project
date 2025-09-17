@@ -88,6 +88,50 @@ class User extends Authenticatable
 
 
     /**
+     * Check if the user can enroll in a new course based on their role/plan.
+     */
+
+    public function canEnroll(): bool
+    {
+        // Getting the registration limit based on the user's role.
+
+            $enrollmentLimit = $this->getEnrollmentLimit();
+
+
+        // The user can always enroll if the limit is unlimited.
+
+            if ($enrollmentLimit === -1) {
+                return true;
+            }
+
+
+        // Counting the number of registrations the user already has.
+
+            $currentEnrollments = $this->enrollments()->count();
+
+
+        // He can enroll if the current number of enrollments is less than the limit.
+
+            return $currentEnrollments < $enrollmentLimit;
+    }
+
+
+    /**
+     * Helper method to get the enrollment limit based on user role.
+     */
+
+    protected function getEnrollmentLimit(): int
+    {
+        // Using the Match Expression.
+
+        return match ($this->role) {
+            'admin' => -1, // Number of courses an administrator can enroll in: Unlimited enrollments;
+            default => 7 // Number of courses a student can enroll in.
+        };
+    }
+
+
+    /**
      * Get the route key for the model.
      */
 

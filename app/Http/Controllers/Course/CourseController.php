@@ -53,6 +53,13 @@ class CourseController extends Controller
             }
 
 
+        // Checks if the user can enroll in another course.
+
+            if (! $user->canEnroll()) {
+                return back()->with('error', 'You have reached your enrollment limit');
+            }
+
+
         // Enrolling the user.
 
             $user->enrollments()->create([
